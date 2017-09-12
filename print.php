@@ -1,3 +1,3 @@
 <?php
-	$index = ['THIS IS FIRST SCRIPT'];
+	$index = ['Now to good beigin'];
 	print_r($index);
