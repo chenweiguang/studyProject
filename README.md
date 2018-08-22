@@ -1,3 +1,0 @@
-# studyProject
-#keepalived
-#lvs
