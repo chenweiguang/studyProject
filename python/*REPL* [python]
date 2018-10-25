@@ -1,0 +1,28 @@
+Python 2.7.10 (default, Oct  6 2017, 22:29:07)
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.31)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = '{\"sample_sn\":\"12sffsfsffsfsf\",\"model\":{}}'
+>>> a
+'{"sample_sn":"12sffsfsffsfsf","model":{}}'
+>>> import json
+>>> b = json.loads(a)
+>>> b
+{u'model': {}, u'sample_sn': u'12sffsfsffsfsf'}
+>>> print type(b)
+<type 'dict'>
+>>> b.model
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'model'
+>>> b.model()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'model'
+>>> b.sample_sn
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'sample_sn'
+>>> b
+{u'model': {}, u'sample_sn': u'12sffsfsffsfsf'}
+>>> for key in b:
+... 	print(key)
